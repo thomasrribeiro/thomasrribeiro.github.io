@@ -39,6 +39,7 @@ body {
     top: 20px;
     width: 350px;
     flex-shrink: 0;
+    position: relative;
 }
 
 .sidebar h1 {
@@ -112,21 +113,68 @@ body {
     cursor: pointer;
 }
 
-.friends-list {
+
+.dla-section {
+    width: 350px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin-top: 25px;
+    align-items: flex-start;
+    gap: 0px;
+    margin-top: -50px;
 }
 
-.friends-list a {
+.dla-section button {
+    align-self: flex-end;
+}
+
+.friends-section {
+    width: 350px;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0px;
+    row-gap: 8px;
+}
+
+.friends-section .friend-link:nth-child(3n+2) {
+    text-align: center;
+}
+
+.friends-section .friend-link:nth-child(3n) {
+    text-align: right;
+}
+
+.generate-tree-btn {
+    background: none;
+    border: none;
+    color: #4a4a4a;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.2s ease;
+}
+
+.generate-tree-btn:hover {
+    opacity: 0.7;
+}
+
+#dla-canvas {
+    width: 350px;
+    height: 250px;
+    display: block;
+}
+
+.friend-link {
     color: var(--gold);
     text-decoration: underline;
     font-size: 14px;
     transition: opacity 0.2s ease;
 }
 
-.friends-list a:hover {
+.friend-link:hover {
     opacity: 0.7;
 }
 
