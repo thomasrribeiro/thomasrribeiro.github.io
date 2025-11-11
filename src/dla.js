@@ -6,8 +6,8 @@ export class DLASimulation {
         this.ctx = canvas.getContext('2d');
         this.width = canvas.width;
         this.height = canvas.height;
-        this.radius = this.height / 2; // Use height for radius (125px)
-        this.center = { x: this.radius+150, y: this.radius }; // Center shifted right
+        this.radius = 100; // Decreased radius
+        this.center = { x: this.radius+190, y: this.height / 2 }; // Center shifted right
 
         // Tree structure - set of occupied points
         this.tree = new Set();
@@ -47,11 +47,11 @@ export class DLASimulation {
         // Increment particle count
         this.particleCount++;
 
-        // Calculate color based on time interval (3 intervals: website gold to lighter)
+        // Calculate color based on time interval (3 intervals: dark to light gold)
         const progress = this.particleCount / this.maxParticles;
         let color;
         if (progress < 0.33) {
-            // First third: website gold color
+            // First third: website gold (darkest)
             color = '#F5C842';
         } else if (progress < 0.67) {
             // Second third: lighter gold
@@ -85,6 +85,39 @@ export class DLASimulation {
     isInsideCircle(x, y) {
         const dist = Math.sqrt((x - this.center.x) ** 2 + (y - this.center.y) ** 2);
         return dist <= this.radius;
+    }
+
+    // Check if a full circle has formed around the border
+    hasFormedFullCircle() {
+        // Sample points around the circle at the radius
+        const numSamples = 36; // Check every 10 degrees
+        const checkRadius = this.radius - 2; // Check slightly inside the radius
+
+        for (let i = 0; i < numSamples; i++) {
+            const angle = (i / numSamples) * Math.PI * 2;
+            const x = this.center.x + checkRadius * Math.cos(angle);
+            const y = this.center.y + checkRadius * Math.sin(angle);
+
+            // Check if there's a particle near this point
+            let foundNearby = false;
+            for (let dx = -3; dx <= 3; dx++) {
+                for (let dy = -3; dy <= 3; dy++) {
+                    const key = this.pointKey(x + dx, y + dy);
+                    if (this.tree.has(key)) {
+                        foundNearby = true;
+                        break;
+                    }
+                }
+                if (foundNearby) break;
+            }
+
+            // If any sample point doesn't have a particle nearby, circle is not complete
+            if (!foundNearby) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     // Perform one iteration of DLA
@@ -139,8 +172,8 @@ export class DLASimulation {
             for (let i = 0; i < 5; i++) {
                 this.iterate();
 
-                // Stop if tree reaches circle radius (with small margin)
-                if (this.maxRadius >= this.radius - 3) {
+                // Stop if tree reaches circle radius
+                if (this.maxRadius >= this.radius - 2) {
                     this.stop();
                     return;
                 }
@@ -159,6 +192,15 @@ export class DLASimulation {
             cancelAnimationFrame(this.animationId);
             this.animationId = null;
         }
+    }
+
+    // Draw the circle boundary
+    drawCircle() {
+        this.ctx.strokeStyle = '#F5C842';
+        this.ctx.lineWidth = 1;
+        this.ctx.beginPath();
+        this.ctx.arc(this.center.x, this.center.y, this.radius, 0, Math.PI * 2);
+        this.ctx.stroke();
     }
 
     // Clear and reset

@@ -26,7 +26,7 @@ body {
 
 .layout {
     display: flex;
-    gap: 60px;
+    gap: 120px;
     align-items: flex-start;
     padding: 20px 30px;
 }
@@ -35,11 +35,9 @@ body {
 .sidebar {
     background: transparent;
     padding: 0;
-    position: sticky;
-    top: 20px;
+    position: relative;
     width: 350px;
     flex-shrink: 0;
-    position: relative;
 }
 
 .sidebar h1 {
@@ -121,7 +119,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 0px;
-    margin-top: -50px;
+    margin-top: -80px;
 }
 
 .dla-section button {
@@ -155,6 +153,7 @@ body {
     cursor: pointer;
     padding: 0;
     transition: opacity 0.2s ease;
+    margin-top: -40px;
 }
 
 .generate-tree-btn:hover {
@@ -192,14 +191,13 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 700;
-    border-bottom: 1px solid var(--black);
-    padding-bottom: 10px;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, 350px);
     gap: 30px;
+    justify-content: start;
 }
 
 .project-card {
@@ -208,6 +206,9 @@ body {
     overflow: hidden;
     transition: all 0.3s ease;
     cursor: pointer;
+    width: 350px;
+    min-width: 350px;
+    max-width: 350px;
 }
 
 .project-card:hover {
@@ -295,15 +296,15 @@ body {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .projects-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fit, 350px);
     }
 
     .layout {
-        gap: 40px;
+        gap: 120px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .layout {
         flex-direction: column;
         gap: 40px;
@@ -316,11 +317,11 @@ body {
     }
 
     .main-content {
-        width: 350px;
+        width: 100%;
     }
 
     .projects-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, 350px);
     }
 
     .section-title {
