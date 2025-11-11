@@ -153,7 +153,7 @@ body {
     cursor: pointer;
     padding: 0;
     transition: opacity 0.2s ease;
-    margin-top: -40px;
+    margin-top: -30px;
 }
 
 .generate-tree-btn:hover {
