@@ -128,7 +128,7 @@ body {
 
 .friends-section {
     width: 320px;
-    margin-top: 40px;
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 0px;
