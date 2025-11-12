@@ -41,7 +41,7 @@ body {
 }
 
 .sidebar h1 {
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 8px;
     margin-top: 0px;
     color: var(--black);
@@ -59,7 +59,7 @@ body {
 .nav-menu a {
     color: var(--gold);
     text-decoration: underline;
-    font-size: 16px;
+    font-size: 18px;
     transition: opacity 0.2s ease;
 }
 
@@ -69,7 +69,7 @@ body {
 
 .sidebar .title {
     color: var(--black);
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 30px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -77,7 +77,7 @@ body {
 }
 
 .bio {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.9;
     color: var(--black);
     margin-top: 0;
@@ -106,7 +106,7 @@ body {
 }
 
 .friendship-box {
-    border: 1px solid var(--gold);
+    border: 2px solid var(--gold);
     padding: 0px 2px;
     cursor: pointer;
 }
@@ -148,7 +148,7 @@ body {
     border: none;
     color: #4a4a4a;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
+    font-size: 14px;
     text-decoration: underline;
     cursor: pointer;
     padding: 0;
@@ -170,7 +170,7 @@ body {
 .friend-link {
     color: var(--gold);
     text-decoration: underline;
-    font-size: 14px;
+    font-size: 16px;
     transition: opacity 0.2s ease;
 }
 
@@ -185,7 +185,7 @@ body {
 }
 
 .section-title {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 30px;
     margin-top: 10px;
     color: var(--black);
@@ -249,7 +249,7 @@ body {
 }
 
 .project-date {
-    font-size: 11px;
+    font-size: 13px;
     color: var(--black);
     margin-bottom: 8px;
     text-transform: uppercase;
@@ -257,14 +257,14 @@ body {
 }
 
 .project-title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     margin-bottom: 12px;
     color: var(--black);
 }
 
 .project-description {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--black);
     line-height: 1.7;
 }
@@ -282,7 +282,7 @@ body {
     padding: 3px 10px;
     background: transparent;
     border: 1px solid var(--black);
-    font-size: 10px;
+    font-size: 11px;
     color: var(--black);
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -326,13 +326,13 @@ body {
     }
 
     .section-title {
-        font-size: 13px;
+        font-size: 15px;
     }
 }
 
 @media (max-width: 480px) {
     .sidebar .title {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .project-card {
