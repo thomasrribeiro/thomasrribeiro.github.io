@@ -66,7 +66,7 @@ let dlaSimulation = null;
 
 if (dlaCanvas && generateTreeBtn) {
     // Initialize canvas size - full About Me width
-    dlaCanvas.width = 350;
+    dlaCanvas.width = 320;
     dlaCanvas.height = 250;
 
     // Auto-start simulation on page load

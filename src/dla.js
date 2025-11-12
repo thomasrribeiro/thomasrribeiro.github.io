@@ -7,7 +7,7 @@ export class DLASimulation {
         this.width = canvas.width;
         this.height = canvas.height;
         this.radius = 100; // Decreased radius
-        this.center = { x: this.radius+190, y: this.height / 2 }; // Center shifted right
+        this.center = { x: this.radius+160, y: this.height / 2 }; // Center shifted right
 
         // Tree structure - set of occupied points
         this.tree = new Set();

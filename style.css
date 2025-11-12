@@ -36,7 +36,7 @@ body {
     background: transparent;
     padding: 0;
     position: relative;
-    width: 350px;
+    width: 320px;
     flex-shrink: 0;
 }
 
@@ -113,7 +113,7 @@ body {
 
 
 .dla-section {
-    width: 350px;
+    width: 320px;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -127,7 +127,7 @@ body {
 }
 
 .friends-section {
-    width: 350px;
+    width: 320px;
     margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -161,7 +161,7 @@ body {
 }
 
 #dla-canvas {
-    width: 350px;
+    width: 320px;
     height: 250px;
     display: block;
     pointer-events: none;
@@ -196,7 +196,7 @@ body {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 350px);
+    grid-template-columns: repeat(auto-fit, 320px);
     gap: 30px;
     justify-content: start;
 }
@@ -207,9 +207,9 @@ body {
     overflow: hidden;
     transition: all 0.3s ease;
     cursor: pointer;
-    width: 350px;
-    min-width: 350px;
-    max-width: 350px;
+    width: 320px;
+    min-width: 320px;
+    max-width: 320px;
 }
 
 .project-card:hover {
@@ -297,7 +297,7 @@ body {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .projects-grid {
-        grid-template-columns: repeat(auto-fit, 350px);
+        grid-template-columns: repeat(auto-fit, 320px);
     }
 
     .layout {
@@ -313,7 +313,7 @@ body {
 
     .sidebar {
         position: static;
-        width: 350px;
+        width: 320px;
         flex-shrink: 0;
     }
 
@@ -322,7 +322,7 @@ body {
     }
 
     .projects-grid {
-        grid-template-columns: repeat(auto-fit, 350px);
+        grid-template-columns: repeat(auto-fit, 320px);
     }
 
     .section-title {
