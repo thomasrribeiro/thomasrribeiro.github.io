@@ -56,6 +56,42 @@ if (friendshipTrigger && friendsListContainer) {
     });
 }
 
+// Handle Human Head Viewer image fallback
+const humanHeadImg = document.getElementById('human-head-img');
+if (humanHeadImg) {
+    humanHeadImg.addEventListener('error', function() {
+        // If local image fails (production), load from deployed human-head-viewer
+        this.src = 'https://thomasrribeiro.github.io/human-head-viewer/images/edge-slice-52-7.png';
+    });
+}
+
+// Debug project image dimensions
+window.addEventListener('load', function() {
+    const projectImg = document.querySelector('.project-img');
+    const img = document.querySelector('.project-img img');
+    if (projectImg && img) {
+        console.log('=== PROJECT IMAGE DEBUG ===');
+        console.log('Container dimensions:', {
+            width: projectImg.offsetWidth,
+            height: projectImg.offsetHeight,
+            computedHeight: window.getComputedStyle(projectImg).height,
+            overflow: window.getComputedStyle(projectImg).overflow
+        });
+        console.log('Image dimensions:', {
+            width: img.offsetWidth,
+            height: img.offsetHeight,
+            naturalWidth: img.naturalWidth,
+            naturalHeight: img.naturalHeight,
+            computedStyle: {
+                width: window.getComputedStyle(img).width,
+                height: window.getComputedStyle(img).height,
+                objectFit: window.getComputedStyle(img).objectFit
+            }
+        });
+        console.log('=========================');
+    }
+});
+
 // Import DLA simulation
 import { DLASimulation } from './dla.js';
 
