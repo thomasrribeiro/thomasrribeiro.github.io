@@ -56,13 +56,14 @@ if (friendshipTrigger && friendsListContainer) {
     });
 }
 
-// Handle Human Head Viewer image fallback
+// Handle Human Head Viewer image - use production URL directly
 const humanHeadImg = document.getElementById('human-head-img');
 if (humanHeadImg) {
-    humanHeadImg.addEventListener('error', function() {
-        // If local image fails (production), load from deployed human-head-viewer
-        this.src = 'https://thomasrribeiro.github.io/human-head-viewer/images/edge-slice-52-7.png';
-    });
+    // In production, use the deployed human-head-viewer image
+    // In dev, the local symlink will work
+    if (import.meta.env.PROD) {
+        humanHeadImg.src = 'https://thomasrribeiro.github.io/human-head-viewer/images/edge-slice-52-7.png';
+    }
 }
 
 // Debug project image dimensions
