@@ -103,7 +103,7 @@ body {
 }
 
 .friendship-box {
-    border: 2px solid var(--gold);
+    border: 1px solid var(--gold);
     padding: 0px 2px;
     cursor: pointer;
 }
