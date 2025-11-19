@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing - Thomas</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .writing-container {
+            padding: 20px 30px;
+            max-width: 100%;
+        }
+
+        .writing-header h1 {
+            font-size: 36px;
+            margin-bottom: 8px;
+            margin-top: 0px;
+            color: var(--black);
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .writing-nav {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .writing-nav a {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .writing-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 800px;
+        }
+
+        .writing-entry {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 40px;
+            align-items: baseline;
+        }
+
+        .writing-date {
+            color: #888;
+            font-size: 18px;
+            font-family: 'IBM Plex Mono', monospace;
+            text-align: right;
+        }
+
+        .writing-title {
+            text-align: left;
+        }
+
+        .writing-title a {
+            color: var(--gold);
+            text-decoration: underline;
+            font-size: 18px;
+            font-family: 'IBM Plex Mono', monospace;
+            transition: opacity 0.2s ease;
+        }
+
+        .writing-title a:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="writing-container">
+        <div class="writing-header">
+            <h1>Writing</h1>
+        </div>
+        <div class="writing-nav">
+            <a href="index.html">&lt; back home</a>
+        </div>
+
+        <div class="writing-list">
+            <div class="writing-entry">
+                <div class="writing-date">November 7, 2024</div>
+                <div class="writing-title">
+                    <a href="https://brainhack.vercel.app/fus" target="_blank">Functional ultrasound through the skull</a>
+                </div>
+            </div>
+            <div class="writing-entry">
+                <div class="writing-date">June 11, 2024</div>
+                <div class="writing-title">
+                    <a href="https://arxiv.org/abs/2406.07662" target="_blank">Progress Towards Decoding Visual Imagery via fNIRS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
