@@ -9,7 +9,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        writing: resolve(__dirname, 'writing.html'),
+        posts: resolve(__dirname, 'posts.html'),
       }
     }
   }
