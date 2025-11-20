@@ -61,7 +61,7 @@ const humanHeadImg = document.getElementById('human-head-img');
 if (humanHeadImg) {
     if (import.meta.env.PROD) {
         // In production, use the deployed human-head-viewer image
-        humanHeadImg.src = 'https://thomasrribeiro.github.io/human-head-viewer/images/edge-slice-52-7.png';
+        humanHeadImg.src = 'https://thomasrribeiro.com/human-head-viewer/images/edge-slice-52-7.png';
     } else {
         // In dev, use the local symlink
         humanHeadImg.src = './assets/edge-slice-52-7.png';
